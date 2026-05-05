@@ -1,0 +1,6 @@
+com\mycompany\helloword\HelloWord.class
+Controllers\UsuarioController.class
+com\mycompany\helloword\Veiculo.class
+Controllers\LeituraController.class
+com\mycompany\helloword\Carro.class
+Controllers\ItemLeituraController.class
