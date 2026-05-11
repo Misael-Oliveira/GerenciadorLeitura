@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Services;
 
 import java.util.ArrayList;
@@ -34,22 +31,25 @@ public class LeituraService {
         }
     }
     
-    public void IniciarLeitura(){
-        
+    public void iniciarLeitura(Leitura leitura){
+        leitura.marcarLendo();
     }
     public void paginasLidas(Leitura leitura,int paginas){
         leitura.paginasLidas(paginas);
     }
     
-    public void finalizarLeitura(){
-        
+    public void finalizarLeitura(Leitura leitura){
+        leitura.marcarLido();
     }
+    
     public void avaliarLivro(Leitura leitura, int nota){
         leitura.avaliacaoLeitura(nota);
     }
+    
     public void gerarRelatorio(){
         
     }
+    
     public void recomendarLivro(){
         
     }

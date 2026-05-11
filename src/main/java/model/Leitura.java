@@ -18,9 +18,10 @@ public class Leitura {
     private int paginaAtual;
     private int avaliacao;
     
-    public Leitura(Livro  livro, Usuario usuario){
+    public Leitura(Usuario usuario, Livro  livro){
         this.setLivro(livro);
         this.setUsuario(usuario);
+        this.status = "Não lido";
         
     }
     
@@ -37,6 +38,12 @@ public class Leitura {
     }
     public void paginasLidas(int paginas){
         setPaginaAtual(getPaginaAtual()+ paginas);
+    }
+    
+    public void infoLeitura(){
+        System.out.println(
+                "Livro: "+livro.getTitulo()
+        );
     }
 
     /**
