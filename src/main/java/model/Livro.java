@@ -13,7 +13,6 @@ public class Livro {
     private String titulo;
     private int numeroPaginas;
     private int anoPublicacao;
-    private String genero;
     private String editora;
     
 }
