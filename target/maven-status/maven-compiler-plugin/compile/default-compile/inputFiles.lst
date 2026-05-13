@@ -1,6 +1,9 @@
-C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\HelloWord\src\main\java\com\mycompany\helloword\Carro.java
-C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\HelloWord\src\main\java\com\mycompany\helloword\HelloWord.java
-C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\HelloWord\src\main\java\com\mycompany\helloword\Veiculo.java
-C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\HelloWord\src\main\java\Controllers\ItemLeituraController.java
-C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\HelloWord\src\main\java\Controllers\LeituraController.java
-C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\HelloWord\src\main\java\Controllers\UsuarioController.java
+C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\GerenciadorLeitura\GerenciadorLeitura\src\main\java\Controllers\LeituraController.java
+C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\GerenciadorLeitura\GerenciadorLeitura\src\main\java\Controllers\UsuarioController.java
+C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\GerenciadorLeitura\GerenciadorLeitura\src\main\java\main\Main.java
+C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\GerenciadorLeitura\GerenciadorLeitura\src\main\java\model\Autor.java
+C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\GerenciadorLeitura\GerenciadorLeitura\src\main\java\model\Leitura.java
+C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\GerenciadorLeitura\GerenciadorLeitura\src\main\java\model\Livro.java
+C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\GerenciadorLeitura\GerenciadorLeitura\src\main\java\model\StatusLeitura.java
+C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\GerenciadorLeitura\GerenciadorLeitura\src\main\java\model\Usuario.java
+C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\GerenciadorLeitura\GerenciadorLeitura\src\main\java\Services\LeituraService.java

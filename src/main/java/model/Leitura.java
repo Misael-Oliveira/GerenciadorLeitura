@@ -1,49 +1,68 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package model;
 
 import model.Livro;
 import model.Usuario;
 
-/**
- *
- * @author Usuário
- */
+
 public class Leitura {
     private Livro livro;
     private Usuario usuario;
-    private String status;
+    private StatusLeitura status;
     private int paginaAtual;
     private int avaliacao;
     
     public Leitura(Usuario usuario, Livro  livro){
         this.setLivro(livro);
         this.setUsuario(usuario);
-        this.status = "Não lido";
+        this.status = StatusLeitura.NAO_LIDO;
         
     }
     
     public void marcarLido(){
-        setStatus("Lido");
+        setStatus(StatusLeitura.LIDO);
     }
     
     public void marcarLendo(){
-        setStatus("Lendo");
+        setStatus(StatusLeitura.LENDO);
     }
     
     public void avaliacaoLeitura(int avaliacao){
-        this.setAvaliacao(avaliacao);
-    }
-    public void paginasLidas(int paginas){
-        setPaginaAtual(getPaginaAtual()+ paginas);
+        if(avaliacao >=1 && avaliacao <=5){
+            this.setAvaliacao(avaliacao);
+        }else{
+            System.out.println("Valor não aceito.");
+        }
     }
     
-    public void infoLeitura(){
-        System.out.println(
-                "Livro: "+livro.getTitulo()
-        );
+    public void adicionarPaginasLidas(int paginas){
+         if(paginas <= 0) {
+           System.out.println("Valor inválido.");
+           return;
+        }
+         
+        int total =getPaginaAtual() + paginas;
+        
+        if(total<=getLivro().getNumeroPaginas()) {
+           setPaginaAtual(getPaginaAtual()+ paginas);
+           
+           if(getPaginaAtual() ==livro.getNumeroPaginas()){
+                marcarLido();
+            }
+        }else {
+            System.out.println("O número é maior que paginas total do livro.");
+        }
+    }
+    
+    @Override
+    public String toString(){
+        return"Livro: "+livro.getTitulo()+
+                " | Autor: "+ livro.getAutor().getNome() +
+                "\n Status: "+ status.getDescricao()+
+                "\n Pagina Atual: "+getPaginaAtual()+
+                "\n Avalição: "+ getAvaliacao()+"\n";
+                
+        
     }
 
     /**
@@ -77,14 +96,14 @@ public class Leitura {
     /**
      * @return the status
      */
-    public String getStatus() {
+    public StatusLeitura getStatus() {
         return status;
     }
 
     /**
      * @param status the status to set
      */
-    public void setStatus(String status) {
+    public void setStatus(StatusLeitura status) {
         this.status = status;
     }
 
@@ -99,7 +118,7 @@ public class Leitura {
      * @param paginaAtual the paginaAtual to set
      */
     public void setPaginaAtual(int paginaAtual) {
-        this.paginaAtual = paginaAtual;
+        this.paginaAtual = +paginaAtual;
     }
 
     /**

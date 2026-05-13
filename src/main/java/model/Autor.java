@@ -1,21 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package model;
 
-/**
- *
- * @author Usuário
- */
+
 public class Autor {
     private String nome;
     private String nacionalidade;
-    private String generoLiterario;
+    private String generoPrincipal;
+    
+    public Autor (String nome, String nacionalidade, String generoPrincipal){
+        this.nome = nome;
+        this.nacionalidade = nacionalidade;
+        this.generoPrincipal = generoPrincipal;
+    }
 
-    /**
-     * @return the nome
-     */
+    @Override
+    public String toString(){
+        return "Nome :" +getNome()+
+            " | nacionalidade: " +getNacionalidade()+
+            " | Genero Principal: "+ getGeneroPrincipal();
+    }
+    
     public String getNome() {
         return nome;
     }
@@ -44,14 +48,14 @@ public class Autor {
     /**
      * @return the generoLiterario
      */
-    public String getGeneroLiterario() {
-        return generoLiterario;
+    public String getGeneroPrincipal() {
+        return generoPrincipal;
     }
 
     /**
      * @param generoLiterario the generoLiterario to set
      */
-    public void setGeneroLiterario(String generoLiterario) {
-        this.generoLiterario = generoLiterario;
+    public void setGeneroLiterario(String generoPrincipal) {
+        this.generoPrincipal = generoPrincipal;
     }
 }

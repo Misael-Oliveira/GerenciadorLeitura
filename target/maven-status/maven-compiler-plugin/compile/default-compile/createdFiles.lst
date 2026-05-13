@@ -1,6 +1,9 @@
-com\mycompany\helloword\HelloWord.class
+model\Leitura.class
 Controllers\UsuarioController.class
-com\mycompany\helloword\Veiculo.class
+model\Autor.class
+model\StatusLeitura.class
+Services\LeituraService.class
+model\Livro.class
+model\Usuario.class
 Controllers\LeituraController.class
-com\mycompany\helloword\Carro.class
-Controllers\ItemLeituraController.class
+main\Main.class

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import model.Leitura;
 import model.Livro;
+import model.StatusLeitura;
 import model.Usuario;
 
 /**
@@ -20,9 +21,20 @@ public class LeituraService {
         this.leituras = new ArrayList<>();
     }
     
-    public void cadastrarLeitura(Usuario usuario, Livro livro){
+    public Leitura cadastrarLeitura(Usuario usuario, Livro livro){
+        for(Leitura leitura : leituras){
+
+            if(leitura.getUsuario().getNome().equals(usuario.getNome()) && leitura.getLivro().getTitulo().equals(livro.getTitulo()) ) {
+                System.out.println("Leitura já cadastrada.");
+
+            return null;
+        }
+    }
+
+        
         Leitura leitura = new Leitura(usuario, livro);
         leituras.add(leitura);
+        return leitura;
     }
     
     public void listarLeitura(){
@@ -34,16 +46,27 @@ public class LeituraService {
     public void iniciarLeitura(Leitura leitura){
         leitura.marcarLendo();
     }
-    public void paginasLidas(Leitura leitura,int paginas){
-        leitura.paginasLidas(paginas);
+    public void adicionarPaginasLidas(Leitura leitura,int paginas){
+        if (leitura.getStatus() == StatusLeitura.LIDO){
+            System.out.println("Leitura já finalizada.");
+            return;
+        }
+        leitura.adicionarPaginasLidas(paginas);
     }
     
     public void finalizarLeitura(Leitura leitura){
-        leitura.marcarLido();
+        int restante =leitura.getLivro().getNumeroPaginas()- leitura.getPaginaAtual();
+        leitura.adicionarPaginasLidas(restante);;
     }
     
     public void avaliarLivro(Leitura leitura, int nota){
+        if (leitura.getStatus() != StatusLeitura.LIDO){
+            System.out.println("Finalize a leitura antes de avaliar.");
+            return;
+        }
+        
         leitura.avaliacaoLeitura(nota);
+        
     }
     
     public void gerarRelatorio(){
