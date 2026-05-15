@@ -5,19 +5,29 @@ package model;
 public class Autor {
     private String nome;
     private String nacionalidade;
-    private String generoPrincipal;
+    private String categoriaPrincipal;
     
-    public Autor (String nome, String nacionalidade, String generoPrincipal){
+    public Autor (String nome, String nacionalidade, String categoriaPrincipal){
+        if(nome == null || nome.trim().isEmpty()){
+            System.out.println("Valor invalido de nome do autor.");
+            return;
+        }
+        
+        if(categoriaPrincipal == null || nome.trim().isEmpty()){
+            System.out.println("Valor invalido de categoria principal.");
+            return;
+        }
+        
         this.nome = nome;
         this.nacionalidade = nacionalidade;
-        this.generoPrincipal = generoPrincipal;
+        this.categoriaPrincipal = categoriaPrincipal;
     }
 
     @Override
     public String toString(){
         return "Nome :" +getNome()+
             " | nacionalidade: " +getNacionalidade()+
-            " | Genero Principal: "+ getGeneroPrincipal();
+            " | Genero Principal: "+ getCategoriaPrincipal();
     }
     
     public String getNome() {
@@ -48,14 +58,14 @@ public class Autor {
     /**
      * @return the generoLiterario
      */
-    public String getGeneroPrincipal() {
-        return generoPrincipal;
+    public String getCategoriaPrincipal() {
+        return categoriaPrincipal;
     }
 
     /**
      * @param generoLiterario the generoLiterario to set
      */
-    public void setGeneroLiterario(String generoPrincipal) {
-        this.generoPrincipal = generoPrincipal;
+    public void setCategoriaPrincipal(String categoriaPrincipal) {
+        this.categoriaPrincipal = categoriaPrincipal;
     }
 }

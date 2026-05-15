@@ -12,6 +12,11 @@ public class Usuario {
         this.email = email;
     }
     
+    @Override
+    public String toString(){
+        return "Nome :" +getNome();
+    }
+    
     
     public String getNome() {
         return nome;

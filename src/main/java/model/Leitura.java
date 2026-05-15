@@ -20,16 +20,16 @@ public class Leitura {
     }
     
     public void marcarLido(){
-        setStatus(StatusLeitura.LIDO);
+        status=StatusLeitura.LIDO;
     }
     
     public void marcarLendo(){
-        setStatus(StatusLeitura.LENDO);
+        status=StatusLeitura.LENDO;
     }
     
     public void avaliacaoLeitura(int avaliacao){
         if(avaliacao >=1 && avaliacao <=5){
-            this.setAvaliacao(avaliacao);
+            this.avaliacao = avaliacao;
         }else{
             System.out.println("Valor não aceito.");
         }
@@ -37,18 +37,21 @@ public class Leitura {
     
     public void adicionarPaginasLidas(int paginas){
          if(paginas <= 0) {
-           System.out.println("Valor inválido.");
+           System.out.println("Valor inválido de paginas.");
            return;
         }
          
         int total =getPaginaAtual() + paginas;
         
-        if(total<=getLivro().getNumeroPaginas()) {
-           setPaginaAtual(getPaginaAtual()+ paginas);
+        if(total<getLivro().getNumeroPaginas()) {
+           paginaAtual =getPaginaAtual()+ paginas;
+           return;
+        }
            
-           if(getPaginaAtual() ==livro.getNumeroPaginas()){
-                marcarLido();
-            }
+        if(getPaginaAtual() ==livro.getNumeroPaginas()){
+            marcarLido();
+            return;    
+            
         }else {
             System.out.println("O número é maior que paginas total do livro.");
         }
@@ -100,12 +103,7 @@ public class Leitura {
         return status;
     }
 
-    /**
-     * @param status the status to set
-     */
-    public void setStatus(StatusLeitura status) {
-        this.status = status;
-    }
+   
 
     /**
      * @return the paginaAtual
@@ -115,24 +113,12 @@ public class Leitura {
     }
 
     /**
-     * @param paginaAtual the paginaAtual to set
-     */
-    public void setPaginaAtual(int paginaAtual) {
-        this.paginaAtual = +paginaAtual;
-    }
-
-    /**
      * @return the avaliacao
      */
     public int getAvaliacao() {
         return avaliacao;
     }
 
-    /**
-     * @param avaliacao the avaliacao to set
-     */
-    public void setAvaliacao(int avaliacao) {
-        this.avaliacao = avaliacao;
-    }
+   
 }
 

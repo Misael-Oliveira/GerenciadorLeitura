@@ -1,9 +1,11 @@
-C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\GerenciadorLeitura\GerenciadorLeitura\src\main\java\Controllers\LeituraController.java
-C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\GerenciadorLeitura\GerenciadorLeitura\src\main\java\Controllers\UsuarioController.java
+C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\GerenciadorLeitura\GerenciadorLeitura\src\main\java\Controllers\SistemaController.java
 C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\GerenciadorLeitura\GerenciadorLeitura\src\main\java\main\Main.java
 C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\GerenciadorLeitura\GerenciadorLeitura\src\main\java\model\Autor.java
 C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\GerenciadorLeitura\GerenciadorLeitura\src\main\java\model\Leitura.java
 C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\GerenciadorLeitura\GerenciadorLeitura\src\main\java\model\Livro.java
 C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\GerenciadorLeitura\GerenciadorLeitura\src\main\java\model\StatusLeitura.java
 C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\GerenciadorLeitura\GerenciadorLeitura\src\main\java\model\Usuario.java
+C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\GerenciadorLeitura\GerenciadorLeitura\src\main\java\Services\AutorService.java
 C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\GerenciadorLeitura\GerenciadorLeitura\src\main\java\Services\LeituraService.java
+C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\GerenciadorLeitura\GerenciadorLeitura\src\main\java\Services\LivroService.java
+C:\Users\Usuário\OneDrive\Documentos\NetBeansProjects\GerenciadorLeitura\GerenciadorLeitura\src\main\java\Services\UsuarioService.java

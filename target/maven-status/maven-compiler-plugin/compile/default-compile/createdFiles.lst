@@ -1,9 +1,11 @@
 model\Leitura.class
-Controllers\UsuarioController.class
 model\Autor.class
 model\StatusLeitura.class
 Services\LeituraService.class
+Services\UsuarioService.class
+Services\LivroService.class
 model\Livro.class
+Controllers\SistemaController.class
 model\Usuario.class
-Controllers\LeituraController.class
 main\Main.class
+Services\AutorService.class
