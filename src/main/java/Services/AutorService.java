@@ -47,6 +47,35 @@ public class AutorService {
         return null;
     }
     
+    public Autor buscarAutorPorNome(String nome){
+
+        for(Autor autor : autores){
+
+            if(
+                autor.getNome().equalsIgnoreCase(nome)){
+                return autor;
+            }
+        }
+
+        return null;
+    }
+    
+    public void atualizarAutor(String nomeAtual,String novoNome,String novaNacionalidade,String novoGenero){
+
+        Autor autor =buscarAutorPorNome(nomeAtual);
+
+        if(autor == null){
+            System.out.println("Autor não encontrado.");
+            return;
+        }
+
+        autor.setNome(novoNome);
+        autor.setNacionalidade(novaNacionalidade);
+        autor.setCategoriaPrincipal(novoGenero);
+
+        System.out.println("Autor atualizado com sucesso." );
+    }
+    
     public void removerAutor(String nome){
 
         Autor autor = buscarAutor(nome);

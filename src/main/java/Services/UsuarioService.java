@@ -47,6 +47,21 @@ public class UsuarioService {
         return null;
     }
     
+    public void atualizarUsuario(String nomeAtual, String novoNome, String novoEmail){
+
+        Usuario usuario = buscarUsuario(nomeAtual);
+
+        if(usuario == null){
+            System.out.println("Usuário não encontrado.");
+            return;
+        }
+
+        usuario.setNome(novoNome);
+        usuario.setEmail(novoEmail);
+
+        System.out.println("Usuário atualizado com sucesso.");
+    }
+    
     public void removerUsuario(String nome){
 
         Usuario usuario = buscarUsuario(nome);

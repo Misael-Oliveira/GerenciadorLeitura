@@ -4,6 +4,7 @@ package Services;
 import java.util.ArrayList;
 import java.util.List;
 import model.Livro;
+import model.Usuario;
 
 
 public class LivroService {
@@ -47,6 +48,21 @@ public class LivroService {
         return null;
     }
     
+    public void atualizarLivro(String tituloAtual,String novoTitulo,int novasPaginas,int novoAno){
+
+        Livro livro =buscarLivroPorTitulo(tituloAtual);
+
+        if(livro == null){
+            System.out.println("Livro não encontrado.");
+            return;
+        }
+
+        livro.setTitulo(novoTitulo);
+        livro.setNumeroPaginas(novasPaginas);
+        livro.setAnoPublicacao(novoAno);
+
+        System.out.println("Livro atualizado com sucesso.");
+    }
     public void removerLivro(String titulo){
 
         Livro livro = buscarLivroPorTitulo(titulo);

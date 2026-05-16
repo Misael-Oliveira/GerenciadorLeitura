@@ -48,6 +48,8 @@ public class Leitura {
            return;
         }
            
+        paginaAtual = total;
+        
         if(getPaginaAtual() ==livro.getNumeroPaginas()){
             marcarLido();
             return;    

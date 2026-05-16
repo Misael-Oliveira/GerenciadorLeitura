@@ -69,11 +69,78 @@ public class LeituraService {
         
     }
     
-    public void gerarRelatorio(){
-        
+    public Leitura buscarLeitura(Usuario usuario,Livro livro){
+
+        for(Leitura leitura : leituras){
+
+            if(leitura.getUsuario().equals(usuario)&& leitura.getLivro().equals(livro)){
+                return leitura;
+            }
+        }
+
+        return null;
     }
     
-    public void recomendarLivro(){
-        
+    public void removerLeitura(Leitura leitura){
+
+        if(leitura == null){
+
+            System.out.println("Leitura não encontrada.");
+
+            return;
+        }
+
+        leituras.remove(leitura);
+
+        System.out.println("Leitura removida com sucesso.");
+    }
+    
+    
+    
+    public int totalLeiturasUsuario(Usuario usuario){
+        int total = 0;
+
+        for(Leitura leitura : leituras){
+            if(leitura.getUsuario().equals(usuario)){
+                total++;
+            }
+        }
+
+        return total;
+    }
+
+    public int livrosFinalizadosUsuario(Usuario usuario){
+        int total = 0;
+
+        for(Leitura leitura : leituras){
+
+            if(leitura.getUsuario().equals(usuario)&&leitura.getStatus()== StatusLeitura.LIDO){
+                total++;
+            }
+        }
+
+        return total;
+    }
+
+    public int livrosEmAndamentoUsuario(Usuario usuario){
+        int total = 0;
+
+        for(Leitura leitura : leituras){
+            if(leitura.getUsuario().equals(usuario)&&leitura.getStatus()== StatusLeitura.LENDO){
+                total++;
+            }
+        }
+        return total;
+    }
+
+    public int totalPaginasLidasUsuario(Usuario usuario){
+        int total = 0;
+
+        for(Leitura leitura : leituras){
+            if(leitura.getUsuario().equals(usuario)){
+                total += leitura.getPaginaAtual();
+            }
+        }
+        return total;
     }
 }
