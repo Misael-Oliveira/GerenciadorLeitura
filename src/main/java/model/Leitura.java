@@ -49,7 +49,8 @@ public class Leitura {
         }
            
         paginaAtual = total;
-        
+
+        //Finaliza automaticamente a leitura quando todos as páginas forem lidas
         if(getPaginaAtual() ==livro.getNumeroPaginas()){
             marcarLido();
             return;    
@@ -70,53 +71,30 @@ public class Leitura {
         
     }
 
-    /**
-     * @return the livro
-     */
     public Livro getLivro() {
         return livro;
     }
-
-    /**
-     * @param livro the livro to set
-     */
+    
     public void setLivro(Livro livro) {
         this.livro = livro;
     }
 
-    /**
-     * @return the usuario
-     */
     public Usuario getUsuario() {
         return usuario;
     }
 
-    /**
-     * @param usuario the usuario to set
-     */
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
 
-    /**
-     * @return the status
-     */
     public StatusLeitura getStatus() {
         return status;
     }
 
-   
-
-    /**
-     * @return the paginaAtual
-     */
     public int getPaginaAtual() {
         return paginaAtual;
     }
 
-    /**
-     * @return the avaliacao
-     */
     public int getAvaliacao() {
         return avaliacao;
     }
