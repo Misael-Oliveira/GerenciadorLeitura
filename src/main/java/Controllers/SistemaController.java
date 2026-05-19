@@ -35,6 +35,8 @@ public class SistemaController {
        
        System.out.println("Digite o email:");
        String email = scanner.nextLine();
+
+        //Limpa o buffer do scanner
        scanner.nextLine();
        
        Usuario usuario = new Usuario(nome, email);
@@ -104,10 +106,14 @@ public class SistemaController {
        
        System.out.println("Digite a nacionalidade:");
        String nacionalidade = scanner.nextLine();
+
+       //Limpa o buffer do scanner
        scanner.nextLine();
        
        System.out.println("Digite a categoria princial do autor:");
        String categoria = scanner.nextLine();
+
+       //Limpa o buffer do scanner
        scanner.nextLine();
        
        Autor autor = new Autor(nome, nacionalidade, categoria);
@@ -160,10 +166,14 @@ public class SistemaController {
        
        System.out.println("Número de páginas:");
        int paginas = scanner.nextInt();
+
+        //Limpa o buffer do scanner
        scanner.nextLine();
        
        System.out.println("Ano de publicação:");
        int ano = scanner.nextInt();
+
+        //Limpa o buffer do scanner
        scanner.nextLine();
         
        System.out.println("Nome do autor:");
@@ -202,11 +212,15 @@ public class SistemaController {
     System.out.println("Novo número de páginas:");
 
     int paginas =scanner.nextInt();
+
+    //Limpa o buffer do scanner   
     scanner.nextLine();
 
     System.out.println("Novo ano:");
 
     int ano =scanner.nextInt();
+
+    //Limpa o buffer do scanner    
     scanner.nextLine();
 
     livroService.atualizarLivro(tituloAtual,novoTitulo,paginas,ano);
@@ -310,6 +324,8 @@ public class SistemaController {
 
         System.out.println("Quantidade de páginas:");
         int paginas = scanner.nextInt();
+
+        //Limpa o buffer do scanner
         scanner.nextLine();
 
         leituraService.adicionarPaginasLidas(leitura,paginas);
@@ -400,28 +416,29 @@ public class SistemaController {
 
         leituraService.avaliarLivro(leitura,nota);
     }
-    
+
+    //Exibe métricas gerais de leitura do usuário
     public void gerarRelatorio(){
 
-    if(usuarioLogado == null){
-        System.out.println( "Faça login primeiro.");
-        return;
+        if(usuarioLogado == null){
+            System.out.println( "Faça login primeiro.");
+            return;
+        }
+
+        System.out.println("\n===== RELATÓRIO =====");
+    
+        System.out.println("Usuário: "+ usuarioLogado.getNome());
+    
+        System.out.println("Total de leituras: "+ leituraService.totalLeiturasUsuario(usuarioLogado));
+    
+        System.out.println("Livros finalizados: "+ leituraService.livrosFinalizadosUsuario(usuarioLogado));
+    
+        System.out.println("Livros em andamento: "+ leituraService.livrosEmAndamentoUsuario(usuarioLogado));
+    
+        System.out.println("Total de páginas lidas: "+ leituraService.totalPaginasLidasUsuario(usuarioLogado));
     }
-
-    System.out.println("\n===== RELATÓRIO =====");
-
-    System.out.println("Usuário: "+ usuarioLogado.getNome());
-
-    System.out.println("Total de leituras: "+ leituraService.totalLeiturasUsuario(usuarioLogado));
-
-    System.out.println("Livros finalizados: "+ leituraService.livrosFinalizadosUsuario(usuarioLogado));
-
-    System.out.println("Livros em andamento: "+ leituraService.livrosEmAndamentoUsuario(usuarioLogado));
-
-    System.out.println("Total de páginas lidas: "+ leituraService.totalPaginasLidasUsuario(usuarioLogado));
-}
     
-    
+    //Interface com Usuário
     public void menuUsuarios(){
 
         int opcao;
