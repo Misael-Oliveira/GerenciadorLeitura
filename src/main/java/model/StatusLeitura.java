@@ -1,7 +1,7 @@
 
 package model;
 
-
+// Classe que define constantes de status de leitura
 public enum StatusLeitura {
     NAO_LIDO("Não Lido"),
     LENDO("Lendo"),
