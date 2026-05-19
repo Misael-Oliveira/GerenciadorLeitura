@@ -8,10 +8,7 @@ import model.Livro;
 import model.StatusLeitura;
 import model.Usuario;
 
-/**
- *
- * @author Usuário
- */
+
 public class LeituraService {
     
 
@@ -60,6 +57,8 @@ public class LeituraService {
     }
     
     public void avaliarLivro(Leitura leitura, int nota){
+
+        //Não permite avaliações antes da finalização da leitura
         if (leitura.getStatus() != StatusLeitura.LIDO){
             System.out.println("Finalize a leitura antes de avaliar.");
             return;
