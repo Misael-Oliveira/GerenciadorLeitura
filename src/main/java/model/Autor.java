@@ -34,37 +34,22 @@ public class Autor {
         return nome;
     }
 
-    /**
-     * @param nome the nome to set
-     */
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    /**
-     * @return the nacionalidade
-     */
     public String getNacionalidade() {
         return nacionalidade;
     }
 
-    /**
-     * @param nacionalidade the nacionalidade to set
-     */
     public void setNacionalidade(String nacionalidade) {
         this.nacionalidade = nacionalidade;
     }
 
-    /**
-     * @return the generoLiterario
-     */
     public String getCategoriaPrincipal() {
         return categoriaPrincipal;
     }
 
-    /**
-     * @param generoLiterario the generoLiterario to set
-     */
     public void setCategoriaPrincipal(String categoriaPrincipal) {
         this.categoriaPrincipal = categoriaPrincipal;
     }
